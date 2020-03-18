@@ -1,8 +1,6 @@
 language: java
 
-install:
+install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Drevision=1.0.1-SNAPSHOT -B -V
 
 script:
-  - mvn --version
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Drevision=1.0.1-SNAPSHOT -B -V
-  - mvn test
+  - mvn test -Drevision=1.0.1-SNAPSHOT
