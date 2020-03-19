@@ -18,6 +18,14 @@
     <module>child2-project</module>
   </modules>
 
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub OWNER Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/jarski/parent-project</url>
+    </repository>
+  </distributionManagement>
+
   <properties>
     <revision>1.0.0-SNAPSHOT</revision>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
