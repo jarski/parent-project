@@ -2,7 +2,7 @@
 
 Dummy project to test multi module maven project and travis
 
-## Deploy new version
+### Deploy new version
 
 
 1. Create and push tag (triggers deployment to maven repository)
@@ -19,7 +19,7 @@ mvn versions:set -DnewVersion=1.0.4-SNAPSHOT
 mvn versions:commit
 ```
 
-3. Commit and push changes
+3. Commit and push changes related to version upgrade
 
 ```bash
 git submodule foreach 'git add pom.xml'
