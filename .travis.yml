@@ -7,10 +7,12 @@ install:
 script:
   - mvn test
 
-before_deploy:
-  provider: script
-  script: "mvn versions:set -DnewVersion=${TRAVIS_TAG}"
-  on:
-    tags: true
-
-deploy: mvn deploy
+deploy:
+  - provider: script
+    script: "mvn versions:set -DnewVersion=${TRAVIS_TAG} && mvn deploy"
+    on:
+      tags: true
+  - provider: script
+    deploy: mvn deploy
+    on:
+      tags: false
