@@ -5,4 +5,8 @@ install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Drevision=1.0.1
 script:
   - mvn test -Drevision=1.0.1-SNAPSHOT
 
-deploy: mvn deploy
+deploy:
+  provider: script
+  script: "cp .travis.m2.settings.xml $HOME/.m2/settings.xml && mvn deploy"
+  on:
+    tags: false
