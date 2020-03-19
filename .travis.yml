@@ -1,9 +1,9 @@
 language: java
 
-install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -Drevision=1.0.1-SNAPSHOT -B -V
+install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script:
-  - mvn test -Drevision=1.0.1-SNAPSHOT
+  - mvn test
 
 deploy:
   provider: script
