@@ -9,7 +9,7 @@ script:
 
 before_deploy:
   provider: script
-  script: mvn versions:set -DnewVersion=$TRAVIS_TAG
+  script: mvn versions:set -DnewVersion=${TRAVIS_TAG}
   on:
     tags: true
 
