@@ -9,7 +9,7 @@ script:
 
 deploy:
   - provider: script
-    script: "mvn versions:set -DnewVersion=${TRAVIS_TAG} && mvn deploy"
+    script: "mvn versions:set -DnewVersion=${TRAVIS_TAG} && mvn versions:commit && mvn deploy"
     on:
       tags: true
   - provider: script
