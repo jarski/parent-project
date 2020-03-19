@@ -13,6 +13,6 @@ deploy:
     on:
       tags: true
   - provider: script
-    deploy: mvn deploy
+    script: mvn deploy
     on:
       tags: false
